@@ -7,14 +7,6 @@ MENU=_menu
 MENU_XML_FILE=$MODULE_NAME$MENU.xml
 echo $MENU_XML_FILE
 SECURITY_FILE="ir.model.access.csv"
-MENUITEM=`<?xml version="1.0" encoding="UTF-8"?>
-<odoo>
-    <menuitem id="" name="" web_icon="$MODULE_NAME,static/description/icon.png">
-        <menuitem id="first_level_menu" name="">
-            <menuitem id="third_level_home_menu" name="" action="" />
-        </menuitem>
-    </menuitem>
-</odoo>`
 cd odoo/custom
 mkdir $MODULE_NAME
 echo "Creating $MODULE_NAME module..."
