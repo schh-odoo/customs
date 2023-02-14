@@ -41,7 +41,7 @@ MODEL_SECURITY_CSV="$MODULE_NAME.access_$MODEL_NAME,access_$MODEL_NAME,$MODULE_N
 MODEL_VIEW="<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<odoo>\n\t<!-- Blank Record -->\n\t<record id=\"$MODEL_NAME$UNDERSCORE$ACTION\" model=\"ir.actions.act_window\">\n\t\t<field name=\"name\">Home</field>\n\t\t<field name=\"res_model\">$MODEL_TABLE_NAME</field>\n\t\t<field name=\"view_mode\">tree,form</field>\n\t\t<field name=\"help\" type=\"html\">\n\t\t\t<p class=\"o_view_nocontent_smiling_face\">\n\t\t\t\tCreate your first property\n\t\t\t</p>\n\t\t</field>\n\t</record>\n\n\t<!-- Tree View -->\n\t<record id=\"$MODEL_NAME$UNDERSCORE$TREE$UNDERSCORE$VIEW\" model=\"ir.ui.view\">\n\t\t<field name=\"name\">$MODEL_NAME$UNDRESCORE$TREE</field>\n\t\t<field name=\"model\">$MODEL_TABLE_NAME</field>\n\t\t<field name=\"arch\" type=\"xml\">\n\t\t\t<tree>\n\t\t\t\t<field name=\"name\" />\n\t\t\t</tree>\n\t\t</field>\n\t</record>\n</odoo>"
 
 # ----------------------------------------------    FLOW    ----------------------------------------------------- #
-cd odoo/script
+cd odoo/custom
 mkdir $MODULE_NAME
 
 echo "Creating $MODULE_NAME module..."
@@ -73,6 +73,14 @@ touch $MENU_XML_FILE
 touch $MODEL_VIEW_XML
 echo -e $MENUITEM>>$MENU_XML_FILE
 echo -e $MODEL_VIEW>>$MODEL_VIEW_XML
-cd ..
+cd ~
 
 echo "Created $MODULE_NAME module succesfully"
+
+
+# --------------------------------------------- Optional  ------------------------------------------------#
+#to run the server with the custom module save:
+
+#uncomment if needed
+#cd odoo/community
+#./odoo-bin --addons-path=addons,../enterprise,../custom -d "DATABASE NAME"
