@@ -73,7 +73,7 @@ touch $MENU_XML_FILE
 touch $MODEL_VIEW_XML
 echo -e $MENUITEM>>$MENU_XML_FILE
 echo -e $MODEL_VIEW>>$MODEL_VIEW_XML
-cd ~
+cd ..
 
 echo "Created $MODULE_NAME module succesfully"
 
@@ -82,5 +82,6 @@ echo "Created $MODULE_NAME module succesfully"
 #to run the server with the custom module save:
 
 #uncomment if needed
+#cd ~
 #cd odoo/community
 #./odoo-bin --addons-path=addons,../enterprise,../custom -d "DATABASE NAME"
