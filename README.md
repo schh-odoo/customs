@@ -3,10 +3,10 @@
 For the createModule.sh use it as following:
 
 three parameters must be given in the command:
-bash createModule.sh "Module Name" "Name to be displayed on the Application" "demo model name"
+*bash createModule.sh "Module Name" "Name to be displayed on the Application" "demo model name"*
 *the demo model name is important*
   
 For the linkerModule.sh us it as follows:
 
 only two parameters must be given in the command:
-bash linkerModule.sh "Module Name" "Name to be displayed on the Application"
+*bash linkerModule.sh "Module Name" "Name to be displayed on the Application"*
