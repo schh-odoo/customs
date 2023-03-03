@@ -2,8 +2,8 @@
 
 For the createModule.sh use it as following:
 
-three parameters must be given in the command:
-*bash base_custom_module.sh "Module Name" "Name to be displayed on the Application" "demo model name"*
+the following parameters must be given in the command:
+*bash base_custom_module.sh "Folder Name" "Module Name" "Name_to_be_displayed_on_the_Application" "demo_model_name" "run" "Database Name"*
 *the demo model name is important*
   
 For the linkerModule.sh ues it as follows:
